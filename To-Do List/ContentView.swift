@@ -8,9 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        Text("Hello, world!")
-            .padding()
+    var editButton = EditButton()
+	
+	var body: some View {
+		NavigationView {
+			List {
+				Text("A List Item")
+				Text("A Second List Item")
+				Text("A Third List Item")
+			}
+			.navigationBarTitle("To-Do List", displayMode: .inline)
+			.toolbar { editButton }
+		}
+		
     }
 }
 
